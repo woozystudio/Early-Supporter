@@ -4,7 +4,8 @@
   "description": "Early Supporter, your personal and helper bot",
   "main": "index.js",
   "scripts": {
-    "test": "npm run src/templates/test.js"
+    "test": "node src/templates/test.js",
+    "bot": "node ."
   },
   "repository": {
     "type": "git",
