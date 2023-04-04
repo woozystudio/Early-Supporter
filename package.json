@@ -21,9 +21,11 @@
   "homepage": "https://github.com/WoozyStudio/Early-Supporter#readme",
   "dependencies": {
     "@discordjs/rest": "^1.7.0",
+    "ascii-table": "^0.0.9",
     "colors": "^1.4.0",
     "discord-api-types": "^0.37.37",
     "discord.js": "^13.15.0",
+    "fs": "^0.0.1-security",
     "mongoose": "^7.0.3"
   }
 }
