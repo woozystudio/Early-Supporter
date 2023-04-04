@@ -1,25 +1,25 @@
-const Discord = require('discord.js');
-const api = require('discord-api-types');
+const { Client, Message, Collection } = require('discord.js');
+const config = require('./config/config.json');
 const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const client = new Discord.Client({ intents: 32767 })
-require('colors');
+const client = new Client({
+    partials: ["MESSAGE", "CHANNEL", "REACTION"],
+    intents: 32767,
+});
 
-client.on('ready', async() => {
-    console.log(`Logged as ${client.user.tag}`)
-}).setMaxListeners(200)
+module.exports = client;
 
-client.commands = new Discord.Collection()
-client.aliases = new Discord.Collection();
+const prefix = config.prefix;
 
-function requirehandlers() {
-    ["command"].forEach(handler => {
-        try {
-            require(`./handlers/${handler}`)(client, Discord)
-        } catch (e) {
-            console.log(e)
-        }
-    })
-}
-requirehandlers()
+client.commands = new Collection();
+client.aliases = new Collection();
+client.events = new Collection();
+client.slashCommands = new Collection();
+
+client.categories = fs.readdirSync('./commands');
+
+//Load all the files
+['command', 'events', 'slashCommands'].forEach((handler) => {
+    require(`./handlers/${handler}`)(client)
+});
+
+client.login(config.token)
