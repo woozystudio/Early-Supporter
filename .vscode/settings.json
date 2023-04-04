@@ -1,0 +1,13 @@
+{
+  "workbench.editor.sharedViewState": false,
+  "workbench.editor.labelFormat": "default",
+  "workbench.editor.enablePreviewFromCodeNavigation": false,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.autoLockGroups": {
+    "default": true,
+    "workbench.editorinputs.searchEditorInput": true,
+    "jupyter-notebook": true,
+    "mainThreadWebview-markdown.preview": true
+  },
+  "discord.largeImage": "Editing a {lang} file"
+}
