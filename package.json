@@ -1,0 +1,29 @@
+{
+  "name": "early-supporter",
+  "version": "1.0.2",
+  "description": "Early Supporter, your personal and helper bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run src/templates/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WoozyStudio/Early-Supporter.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Woozy's YT",
+  "license": "SEE LICENSE IN README.md",
+  "bugs": {
+    "url": "https://github.com/WoozyStudio/Early-Supporter/issues"
+  },
+  "homepage": "https://github.com/WoozyStudio/Early-Supporter#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.7.0",
+    "colors": "^1.4.0",
+    "discord-api-types": "^0.37.37",
+    "discord.js": "^13.15.0",
+    "mongoose": "^7.0.3"
+  }
+}
