@@ -8,5 +8,18 @@ require('colors');
 
 client.on('ready', async() => {
     console.log(`Logged as ${client.user.tag}`)
-})
-client.setMaxListeners(200)
+}).setMaxListeners(200)
+
+client.commands = new Discord.Collection()
+client.aliases = new Discord.Collection();
+
+function requirehandlers() {
+    ["command"].forEach(handler => {
+        try {
+            require(`./handlers/${handler}`)(client, Discord)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+}
+requirehandlers()
