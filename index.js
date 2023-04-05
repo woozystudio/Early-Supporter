@@ -1,10 +1,22 @@
 const { Client, Message, Collection } = require('discord.js');
+const mongoose = require('mongoose');
 const config = require('./config/config.json');
 const fs = require('fs');
 const client = new Client({
     partials: ["MESSAGE", "CHANNEL", "REACTION"],
     intents: 32767,
 });
+require('colors');
+
+mongoose.set('strictQuery', false);
+mongoose.connect("mongodb+srv://EarlySupporter:EarlyCluser23@earlysupporter.7mc0qrn.mongodb.net/?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log("☁ Connected to the MongoDB database successfully!".blue)
+}).catch((error) => {
+  console.log("☁ An error occurred while connecting to the MongoDB database!".red)
+})
 
 module.exports = client;
 
