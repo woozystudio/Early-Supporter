@@ -15,7 +15,7 @@ module.exports = (client) => {
             } else {
                 table.addRow(file, 'Error - Missing a help.name or it is not a string...');
                 continue;
-            } if(pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.aliases.set(alias, pull.name))
+            } if(pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.alias.set(alias, pull.name))
         }
     });
 

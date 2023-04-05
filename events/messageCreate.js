@@ -14,6 +14,6 @@ client.on("messageCreate", async (message) => {
     const cmd = args.shift().toLowerCase();
     if(cmd.length == 0) return;
     let command = client.commands.get(cmd)
-    if(!command) command = client.commands.get(client.aliases.get(cmd));
+    if(!command) command = client.commands.get(client.alias.get(cmd));
     if(command) command.execute(client, message, args);
 })
