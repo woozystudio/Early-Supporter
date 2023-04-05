@@ -5,6 +5,7 @@ module.exports = {
     name: "eval",
     alias: [],
     async execute(client, message, args) {
+        if(message.author.id !== '869583777884667964') return;
         if (!args.length) return message.reply("❌ `|` Plase provide some code to evaluate.")
 
         try {
