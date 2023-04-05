@@ -11,10 +11,9 @@ module.exports = client;
 const prefix = config.prefix;
 
 client.commands = new Collection();
-client.aliases = new Collection();
+client.alias = new Collection();
 client.events = new Collection();
 client.slashCommands = new Collection();
-
 client.categories = fs.readdirSync('./commands');
 
 //Load all the files
