@@ -63,6 +63,10 @@ module.exports = {
     grey_inactive_icons: '4E5058',
     red_icons: 'F23F42',
     green_icons: '23A559',
-    
 
+    orange: "0xF79554",
+    green: "0x5CFF9D",
+    red: "0xFF5C5C",
+    yellow: "0xFFDC5C",
+    grey: "2B2D31" 
 }
