@@ -36,6 +36,63 @@ client.categories = fs.readdirSync('./commands');
 });
 
 client.on('interactionCreate', async(interaction) => {
+  //HELP COMMANDS
+  if(interaction.isButton()) {
+    if(interaction.customId === "gotopage") {
+    /**
+     * @param {Discord.Client} client 
+     * @param {Discord.CommandInteraction} interaction 
+     */
+    
+    const modal = new Discord.Modal()
+        .setTitle("Enter a Page Number")
+        .setCustomId("pagenavegator")
+
+        const nombre = new Discord.TextInputComponent()
+        .setCustomId("int")
+        .setLabel("Page Number")
+        .setPlaceholder("Enter a number from 1 to 8")
+        .setStyle("SHORT")
+        .setRequired(true)
+
+        const row = new Discord.MessageActionRow()
+        .addComponents(nombre)
+      
+
+        modal.addComponents(row)
+        
+        await interaction.showModal(modal)
+  }
+}
+
+  if(interaction.isModalSubmit()) {
+    if(interaction.customId === "pagenavegator") {
+      const page02 = new Discord.MessageEmbed()
+      .setDescription("2")
+      const page03 = new Discord.MessageEmbed()
+      .setDescription("3")
+      const page04 = new Discord.MessageEmbed()
+      .setDescription("4")
+      const page05 = new Discord.MessageEmbed()
+      .setDescription("5")
+      const page06 = new Discord.MessageEmbed()
+      .setDescription("6")
+      const page07 = new Discord.MessageEmbed()
+      .setDescription("7")
+      const page08 = new Discord.MessageEmbed()
+      .setDescription("8")
+      const page0 = new Discord.MessageEmbed()
+      .setDescription("0")
+
+      const int = interaction.fields.getTextInputValue("int");
+  
+      interaction.message.edit({ embeds: [page0] })
+    }
+  }
+
+
+
+  //TICKET SYSTEMS
   //SPANISH ES_MX
   if(interaction.isButton()) {
     if(interaction.customId === "createTicketES") {
@@ -64,6 +121,11 @@ client.on('interactionCreate', async(interaction) => {
           .setEmoji("📑")
           .setDisabled(true)
           .setLabel("Transcribir")
+          .setStyle("SECONDARY"),
+          new Discord.MessageButton()
+          .setCustomId("claimTicketES")
+          .setEmoji("⭐")
+          .setLabel("Claimear Ticket")
           .setStyle("SECONDARY"),
         )
 
@@ -109,6 +171,11 @@ client.on('interactionCreate', async(interaction) => {
           .setLabel("Transcribir")
           .setDisabled(true)
           .setStyle("SECONDARY"),
+          new Discord.MessageButton()
+          .setCustomId("claimTicketES")
+          .setEmoji("⭐")
+          .setLabel("Claimear Ticket")
+          .setStyle("SECONDARY"),
         )
 
         const general = new Discord.MessageEmbed()
@@ -140,6 +207,16 @@ client.on('interactionCreate', async(interaction) => {
 
     }
   }
+
+  if(interaction.isButton()) {
+    if(interaction.customId === "claimTicketES") {
+      const claim = new Discord.MessageEmbed()
+      .setDescription(`\`⭐\` El miembro del staff que te va a estar atendiendo el dia de hoy es <@${interaction.user.id}>.`)
+      .setColor(`${color.green}`)
+
+      interaction.reply({ embeds: [claim] })
+    }
+  }
   //ENGLISH EN_US
 
   if(interaction.isButton()) {
@@ -169,6 +246,11 @@ client.on('interactionCreate', async(interaction) => {
           .setEmoji("📑")
           .setDisabled(true)
           .setLabel("Transcript")
+          .setStyle("SECONDARY"),
+          new Discord.MessageButton()
+          .setCustomId("claimTicketUS")
+          .setEmoji("⭐")
+          .setLabel("Claim")
           .setStyle("SECONDARY"),
         )
 
@@ -214,6 +296,11 @@ client.on('interactionCreate', async(interaction) => {
           .setDisabled(true)
           .setLabel("Transcript")
           .setStyle("SECONDARY"),
+          new Discord.MessageButton()
+          .setCustomId("claimTicketUS")
+          .setEmoji("⭐")
+          .setLabel("Claim")
+          .setStyle("SECONDARY"),
         )
 
         const general = new Discord.MessageEmbed()
@@ -243,6 +330,16 @@ client.on('interactionCreate', async(interaction) => {
         interaction.channel.delete()
       }, 5000)
 
+    }
+  }
+
+  if(interaction.isButton()) {
+    if(interaction.customId === "claimTicketUS") {
+      const claim = new Discord.MessageEmbed()
+      .setDescription(`\`⭐\` The staff member who will be assisting you today is <@${interaction.user.id}>.`)
+      .setColor(`${color.green}`)
+
+      interaction.reply({ embeds: [claim] })
     }
   }
 })
