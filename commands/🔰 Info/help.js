@@ -11,16 +11,16 @@ module.exports = {
         .setColor("BLURPLE")
         .addFields([
             {
-                name: "Categories", value: "`⭐` Premium\n`🎑` User Commands\n`🎫` Developer\n`🔰` Information\n`🧪` Test\n`🚫` Moderation\n`🛒` Configuration"
+              name: "Categories", value: "`📦` Menu (Page 1)\n`⭐` Premium (Page 2)\n`🎑` User Commands (Page 3)\n`🎫` Developer (Page 3)\n`🔰` Information (Page 4)\n`🧪` Test (Page 5)\n`🚫` Moderation (Page 6)\n`🛒` Configuration (Page 7)"
             }
-        ])
+          ])
         .setFooter({ text: "Besides that, I'm in charge of unlocking the text channels for those who don't have a microphone. My creator Woozy's YT is working on me to implement new features." })
 
         const ButtonPage1 = new Discord.MessageActionRow()
         .addComponents(
             new Discord.MessageButton()
             .setCustomId("page1")
-            .setLabel("Page 1/8")
+            .setLabel("Page 1/7")
             .setDisabled(true)
             .setStyle("SECONDARY"),
 
