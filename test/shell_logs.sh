@@ -1,6 +1,24 @@
-$# undefined shell "husky_events"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
 yarn build:affected && yarn lint-staged
-yarn events:test
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-$start: true
+yarn build:affected && yarn lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn build:affected && yarn lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn build:affected && yarn lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn build:affected && yarn lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn build:affected && yarn lint-staged
