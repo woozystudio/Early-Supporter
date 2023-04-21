@@ -1,1 +1,8 @@
+# automatically normalize line endings
 * text=auto
+
+*.md text linguist-detectable
+*.{yml,yaml} text
+
+*.json linguist-detectable=true
+test/**/*.json linguist-vendored=true
