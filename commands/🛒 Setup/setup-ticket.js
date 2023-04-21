@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../config/config.json');
-const color = require('../../config/hexadecimalColors');
+const color = require('../../js/hexadecimalColors');
 
 module.exports = {
     name: "setup-ticket",
