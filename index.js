@@ -93,7 +93,15 @@ client.on('interactionCreate', async (interaction) => {
             .setEmoji("📝")
         )
       const page02 = new Discord.MessageEmbed()
-        .setDescription("2")
+        .setTitle("Early Suporter's Helper (Premium)")
+        .setDescription("In this category there is only 1 command, `!premium`. This command is used to register in the premium program and get access to news and updates ahead of time. It is like the betatesters program.")
+        .setColor("BLURPLE")
+        .addFields([
+          {
+            name: "Commands:", value: "`!premium` Enter a valid password to register for the Early Supporter premium program."
+          }
+        ])
+        .setFooter({ text: "Besides that, I'm in charge of unlocking the text channels for those who don't have a microphone. My creator Woozy's YT is working on me to implement new features." })
       const ButtonPage2 = new Discord.MessageActionRow()
         .addComponents(
           new Discord.MessageButton()
@@ -193,31 +201,24 @@ client.on('interactionCreate', async (interaction) => {
 
       if (int === "1") {
         interaction.message.edit({ embeds: [page01], components: [ButtonPage1] })
-        interaction.reply({ content: "You have been redirected to page number 1.", ephemeral: true })
       }
       if (int === "2") {
         interaction.message.edit({ embeds: [page02], components: [ButtonPage2] })
-        interaction.reply({ content: "You have been redirected to page number 2.", ephemeral: true })
       }
       if (int === "3") {
         interaction.message.edit({ embeds: [page03], components: [ButtonPage3] })
-        interaction.reply({ content: "You have been redirected to page number 3.", ephemeral: true })
       }
       if (int === "4") {
         interaction.message.edit({ embeds: [page04], components: [ButtonPage4] })
-        interaction.reply({ content: "You have been redirected to page number 4.", ephemeral: true })
       }
       if (int === "5") {
         interaction.message.edit({ embeds: [page05], components: [ButtonPage5] })
-        interaction.reply({ content: "You have been redirected to page number 5.", ephemeral: true })
       }
       if (int === "6") {
         interaction.message.edit({ embeds: [page06], components: [ButtonPage6] })
-        interaction.reply({ content: "You have been redirected to page number 6.", ephemeral: true })
       }
       if (int === "7") {
         interaction.message.edit({ embeds: [page07], components: [ButtonPage7] })
-        interaction.reply({ content: "You have been redirected to page number 7.", ephemeral: true })
       }
     }
   }
