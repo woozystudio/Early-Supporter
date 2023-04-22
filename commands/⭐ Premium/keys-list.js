@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: "list-keys",
-    alias: ["keys"],
+    aliases: ["keys"],
     async execute(client, message, args){
         if(!message.member.permissions.has("ADMINISTRATOR")) return message.reply("❌ `|` You do not have sufficient permissions to do this command.");
 
