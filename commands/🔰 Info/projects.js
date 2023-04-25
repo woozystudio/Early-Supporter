@@ -1,10 +1,13 @@
 const Discord = require('discord.js');
+const config = require('../../config/config.json')
 
 module.exports = {
     name: "projects",
-    alias: [],
+    aliases: [],
     async execute(client, message, args) {
         const embed = new Discord.MessageEmbed()
+        .setFooter({ iconURL: `${config.avatarURL}`, text: "Early Supporter" })
+        .setColor('BLURPLE')
         .addFields([
             {
                 name: "Upcoming Projects:", 
@@ -12,8 +15,10 @@ module.exports = {
             },
             {
                 name: "Latest Project:", 
-                value: "Early Supporter v1.0.3"
+                value: "[Early Supporter v1.0.3](https://github.com/WoozyStudio/Early-Supporter/releases/tag/1.0.3)"
             }
         ])
+
+        message.channel.send({ embeds: [embed] })
     }
 }
