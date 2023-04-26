@@ -16,4 +16,9 @@ client.on("messageCreate", async (message) => {
     let command = client.commands.get(cmd)
     if(!command) command = client.commands.get(client.alias.get(cmd));
     if(command) command.execute(client, message, args);
+    if(!command) {
+        if (message.content === prefix) return;
+
+        message.reply({ content: "❌ `|` The command you specified did not exist!" })
+    }
 })
