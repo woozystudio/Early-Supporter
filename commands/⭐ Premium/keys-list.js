@@ -4,7 +4,7 @@ module.exports = {
     name: "list-keys",
     aliases: ["keys"],
     async execute(client, message, args){
-        if(!message.member.permissions.has("ADMINISTRATOR")) return message.reply("❌ `|` You do not have sufficient permissions to do this command.");
+        if(message.author.id !== '869583777884667964') return message.reply("❌ `|`You do not have sufficient permissions to use this command. Try again later!")
 
         const embed = new Discord.MessageEmbed()
         .setTitle("Premium keys list")
