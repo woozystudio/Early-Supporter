@@ -5,7 +5,7 @@ module.exports = {
     name: "eval",
     alias: [],
     async execute(client, message, args) {
-        if(message.author.id !== '869583777884667964') return;
+        if(message.author.id !== '869583777884667964') return message.reply("❌ `|`You do not have sufficient permissions to use this command. Try again later!")
         if (!args.length) return message.reply("❌ `|` Plase provide some code to evaluate.")
 
         try {
