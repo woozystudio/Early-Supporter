@@ -11,3 +11,7 @@
 
 *.json linguist-detectable=true
 test/**/*.json linguist-vendored=true
+*.gitignore linguist-detectable=true
+test/**/*.gitignore linguist-vendored=true
+*.gitattributes linguist-detectable=true
+test/**/*.gitattributes linguist-vendored=true
