@@ -5,7 +5,7 @@ module.exports = {
     name: "eval",
     alias: [],
     async execute(client, message, args) {
-        if(message.author.id !== '869583777884667964') return message.reply("❌ `|`You do not have sufficient permissions to use this command. Try again later!")
+        if(message.author.id !== '869583777884667964') return message.reply("❌ `|` You do not have sufficient permissions to use this command. Try again later!")
         if (!args.length) return message.reply("❌ `|` Plase provide some code to evaluate.")
 
         try {
@@ -18,7 +18,6 @@ module.exports = {
                     .setColor("BLURPLE"),
 
                     new Discord.MessageEmbed()
-                    .setTitle("Development Console")
                     .setDescription(`\`\`\`js\n${truncate}\`\`\``)
                     .setColor("BLURPLE")
                     .setTimestamp()
@@ -27,7 +26,6 @@ module.exports = {
         } catch (e) {
             message.channel.send({
                 embeds: [new Discord.MessageEmbed()
-                    .setTitle("Development Console Error")
                     .setDescription(`\`\`\`js\n${e.toString().substring(0, 2048)}\`\`\``)
                     .setColor("RED")
                     .setTimestamp()
