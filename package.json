@@ -1,6 +1,6 @@
 {
   "name": "early-supporter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Early Supporter, your personal and helper bot",
   "main": "index.js",
   "scripts": {
