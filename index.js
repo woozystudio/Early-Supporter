@@ -37,6 +37,24 @@ client.categories = fs.readdirSync('./commands');
 
 
 client.on('interactionCreate', async (interaction) => {
+  if(interaction.isModalSubmit()) {
+    if(interaction.customId === "review") {
+      const name = interaction.fields.getTextInputValue("name");
+      const desc = interaction.fields.getTextInputValue("desc");
+      const starts = interaction.fields.getTextInputValue("starts");
+
+      const reviewEmbed = new Discord.MessageEmbed()
+      .setTitle(`${name} has been send a review!`)
+      .setDescription(`**User**: \`${name}\`\n**Starts**: ${starts}\n**Opinion**: ${desc}`)
+      .setColor("BLURPLE")
+      .setTimestamp()
+      .setThumbnail(`${config.avatarURL}`)
+
+      client.channels.cache.get('1100569424483856477').send({ embeds: [reviewEmbed] })
+      client.channels.cache.get('1101957482844278914').send({ embeds: [reviewEmbed] })
+      interaction.reply({ content: `Thank you for rating Early Supporter, ${name}!`, ephemeral: true })
+    }
+  }
 
   //TICKET SYSTEMS
   //SPANISH ES_MX
