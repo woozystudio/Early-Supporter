@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                 name: "Latest Project:", 
-                value: "[Early Supporter v1.0.3](https://github.com/WoozyStudio/Early-Supporter/releases/tag/1.0.3)"
+                value: "[Early Supporter v1.0.4](https://github.com/WoozyStudio/Early-Supporter/releases/tag/1.0.4)"
             }
         ])
 
