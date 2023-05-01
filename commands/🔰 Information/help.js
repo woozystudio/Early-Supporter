@@ -27,7 +27,7 @@ module.exports = {
               name: "Test", value: "`test`"
             },
             {
-              name: "Moderation", value: "`ban` `kick` `snipe`"
+              name: "Moderation", value: "`ban` `kick` `snipe` `addrole` `removerole`"
             },
             {
               name: "Configuration", value: "`setup-ticket`"
