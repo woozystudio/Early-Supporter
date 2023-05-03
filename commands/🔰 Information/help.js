@@ -18,19 +18,16 @@ module.exports = {
               name: "Premium", value: "`premium`"
             },
             {
-              name: "Developers", value: "Comming soon..."
+              name: "Server Management", value: "`setup-ticket`"
             },
             {
-              name: "Informatión", value: "`help` `avatar` `botinfo` `devinfo` `guildinfo` `guildroles` `ping` `premiuminfo` `projects` `roleinfo` `userinfo`"
+              name: "Information", value: "`help` `avatar` `botinfo` `devinfo` `guildinfo` `guildroles` `ping` `premiuminfo` `projects` `roleinfo` `userinfo`"
             },
             {
               name: "Test", value: "`test`"
             },
             {
-              name: "Moderation", value: "`ban` `kick` `snipe` `addrole` `removerole`"
-            },
-            {
-              name: "Configuration", value: "`setup-ticket`"
+              name: "Moderation", value: "`ban` `kick` `snipe` `addrole` `removerole` `personalrole`"
             }
           ])
         .setFooter({ text: "Besides that, I'm in charge of unlocking the text channels for those who don't have a microphone. My creator Woozy's YT is working on me to implement new features." })
