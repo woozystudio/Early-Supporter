@@ -2,16 +2,10 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "addrole",
-    aliases: [],
+    aliases: ["giverole"],
     async execute(client, message, args) {
-        /*const user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author;
-        const role = message.mentions.roles.first()
-        if(!user) return message.reply("❌ `|` Please mention a user in order to add the role!")
-        if(!role) return message.reply("❌ `|` Please mention a role in order to add the role!")
 
-        message.channel.send({ content: `Successfully added the role <@&${role.id}> to <@${user.id}>!` })*/
-
-        const targetUser = message.mentions.users.first();
+        const targetUser = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author;
         if (!targetUser) {
             message.reply('❌ `|` Please mention a user in order to add the role!');
             return;
