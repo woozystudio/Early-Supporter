@@ -1,2 +1,4 @@
 node_modules
-.github
+.github/ISSUE_TEMPLATE
+.github/workflows
+.github/FUNDING.yml
