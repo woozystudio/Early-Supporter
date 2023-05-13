@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "list-keys",
+    name: "keys-list",
     aliases: ["keys"],
     async execute(client, message, args){
         if(message.author.id !== '869583777884667964') return message.reply("❌ `|`You do not have sufficient permissions to use this command. Try again later!")

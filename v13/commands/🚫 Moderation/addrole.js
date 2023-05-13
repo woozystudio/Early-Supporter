@@ -24,7 +24,7 @@ module.exports = {
         }
 
         if (targetMember.roles.cache.has(role.id)) {
-            message.reply(`❌ \`|\` ${targetMember.id} already has this role.`);
+            message.reply(`❌ \`|\` <@${targetMember.id}> already has this role.`);
             return;
         }
 
