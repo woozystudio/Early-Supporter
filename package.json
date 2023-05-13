@@ -1,0 +1,29 @@
+{
+  "name": "early-supporter",
+  "version": "2.0.0",
+  "description": "Early Supporter, your personal and helper bot",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WoozyStudio/Early-Supporter.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Woozy's YT",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/WoozyStudio/Early-Supporter/issues"
+  },
+  "homepage": "https://github.com/WoozyStudio/Early-Supporter#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.7.1",
+    "chalk": "^4.1.2",
+    "colors": "^1.4.0",
+    "discord-api-types": "^0.37.42",
+    "discord.js": "^14.11.0"
+  }
+}
