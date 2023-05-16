@@ -1,14 +1,24 @@
 {
-  "name": "terror-v14",
-  "version": "1.0.0",
-  "description": "",
+  "name": "early-supporter",
+  "version": "2.0.0",
+  "description": "Early Supporter, your personal and helper bot",
   "main": "src/bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WoozyStudio/Early-Supporter.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Woozy's YT",
+  "license": "SEE LICENSE IN LICENSE OR README.md",
+  "bugs": {
+    "url": "https://github.com/WoozyStudio/Early-Supporter/issues"
+  },
+  "homepage": "https://github.com/WoozyStudio/Early-Supporter#readme",
   "dependencies": {
     "@discordjs/rest": "^1.7.1",
     "chalk": "^4.1.2",
