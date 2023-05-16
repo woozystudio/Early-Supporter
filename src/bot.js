@@ -41,6 +41,8 @@ const client = new Discord.Client({
 
 client.commands = new Collection();
 client.commandArray = [];
+client.buttons = new Collection();
+client.selectMenus = new Collection();
 
 const functionFolders = fs.readdirSync(`./src/functions`);
 for (const folder of functionFolders) {
@@ -52,4 +54,5 @@ for (const folder of functionFolders) {
 
 client.handleEvents();
 client.handleCommands();
+client.handleComponents();
 client.login(config.token);
