@@ -30,6 +30,6 @@ module.exports = {
 
         const dateResult = new Date(`${date} ${time}`).getTime() / 1000
 
-        await interaction.reply("<t:" + dateResult + ":" + format + ">");
+        await interaction.reply("<t:" + dateResult + ":" + format + ">" + ` - \`<t:${dateResult}:${format}>\``);
     },
 };
