@@ -20,5 +20,10 @@
   "[javascript]": {
     "diffEditor.codeLens": false,
     "editor.autoClosingBrackets": "languageDefined"
-  }
+  },
+
+  "material-icon-theme.folders.associations": {
+    "customFolderName": "aa",
+    "sample": "dist"
+}
 }
