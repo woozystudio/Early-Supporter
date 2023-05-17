@@ -12,7 +12,7 @@ module.exports = {
         .addFields([
             {
                 name: "Upcoming Projects:", 
-                value: "Supporter API\n Actualization v2.0.0"
+                value: "Supporter API\n Actualization v2.0.0 (Working on)"
             },
             {
                 name: "Latest Project:", 
